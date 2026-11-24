@@ -29,3 +29,6 @@ JavaScript syntax checked. Sample Excel output reopened with openpyxl; PDF conta
 
 ## V8 branding update
 The purple koala artwork is embedded in the header and used for the browser favicon and PWA icons. Financial features and database identifiers are unchanged.
+
+## V9 — PHP and JPY
+Select currency in each account. Existing accounts default to PHP. Amounts are stored in hundredths for compatibility; JPY input must be whole yen. Cross-currency transfers require the actual received amount, and the effective rate is calculated from the two amounts. Summary and Insights currency selectors keep totals separate. TXT backups and monthly reports include currency and received amounts. Do not restore V9 backups into older versions. Currency relabeling is blocked for accounts with transfers.
