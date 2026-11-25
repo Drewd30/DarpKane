@@ -32,3 +32,17 @@ The purple koala artwork is embedded in the header and used for the browser favi
 
 ## V9 — PHP and JPY
 Select currency in each account. Existing accounts default to PHP. Amounts are stored in hundredths for compatibility; JPY input must be whole yen. Cross-currency transfers require the actual received amount, and the effective rate is calculated from the two amounts. Summary and Insights currency selectors keep totals separate. TXT backups and monthly reports include currency and received amounts. Do not restore V9 backups into older versions. Currency relabeling is blocked for accounts with transfers.
+
+## V11 — Dues and scheduled payments
+- Tap outside a popup to dismiss it without saving. Dues is a separate bottom navigation tab, with Installments and Utilities filters.
+- Add an installment schedule with the first due date, monthly amount, and number of payments (1–120). Dates clamp to the last valid day of shorter months. A utility is a one-time reminder. Edit or delete each unpaid payment separately.
+- From a new expense, choose Schedule as installment or utility instead. From an existing expense, schedule future payments without changing the original expense. Mark as paid records an expense on the selected account on the actual payment date; unpaid items never affect balances, history, reports or insights. Deleting the linked expense reopens the due. Editing the expense retains its link. Credit account entries are installment charges, not card repayments; avoid recording the full purchase as well if using this tracking method.
+- Upcoming payments on Home lists card statements and up to six earliest unpaid scheduled payments; View dues shows all. Reminders are in-app, not push notifications.
+- Dues are stored in the existing metadata store and included in TXT transfers. Restoring older backups replaces dues with an empty list. Accounts with dues cannot be deleted or have currency changed until their dues are resolved (paid due records are retained).
+- JavaScript syntax checked; browser interactions not verified.
+
+
+V11: Dues are grouped by plan, with colored full-width cards, hidden paid history, individual payment editing and additional payment periods. Legacy schedules are grouped only when their matching dates and identifiers are unambiguous.
+
+## V12 — Dues layout refinement
+Removed the card chevron and duplicate detail heading. Edit/check and close icons sit inside the detail card. Payment actions sit directly below the amount on the right. No data schema changes.
